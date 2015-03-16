@@ -13,7 +13,7 @@ s = Scraper(requests_per_minute=60)
 # s.cache_write_only = False
 
 def read_csv():
-	with open('scrape1-source.csv', 'rb') as f:
+	with open('scrapedsearch.csv', 'rb') as f:
 		reader = csv.DictReader(f, fieldnames=["link", "title", "emptytitle", "pr_date", "description", "page_number"])
 		for row in reader:
 			print row

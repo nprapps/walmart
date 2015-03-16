@@ -31,7 +31,6 @@ def list_page(search_page):
 		description_text = description.text_content()
 		title = link.text_content()
 
-		writer = unicodecsv.writer(open('scrapedsearch.csv', 'a'))
 		writer.writerow([title, release_href, date_text, description_text])
 
 #	if href: 
@@ -42,5 +41,7 @@ def list_page(search_page):
 
 if __name__ == '__main__':
 	os.remove('scrapedsearch.csv')
+	writer = unicodecsv.writer(open('scrapedsearch.csv', 'a'))
+	writer.writerow(['title', 'link', 'date', 'description'])
 	list_page('http://news.walmart.com/news-archive/?q=open%20shoppers')
 
