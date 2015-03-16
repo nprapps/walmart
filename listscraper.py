@@ -12,11 +12,8 @@ def list_page(search_page):
 	doc = fromstring(response)
 
 	nextlink = doc.find_class('next')
-	print nextlink
-
 	href = nextlink[0].attrib['href']
-	print href
-	print nextlink[0].attrib['class']
+
 	results_list = doc.get_element_by_id('results_list')
 	results = results_list.findall('li')
 	for release in results:
@@ -24,7 +21,6 @@ def list_page(search_page):
 		link = description_div.findall('a')[0]
 		date = release.find_class('date')[0]
 		description = release.find_class('desc')[0]
-		print link, date, description
 
 		release_href = link.attrib['href']
 		date_text = date.text_content()
@@ -32,9 +28,6 @@ def list_page(search_page):
 		title = link.text_content()
 
 		writer.writerow([title, release_href, date_text, description_text])
-
-#	if href: 
-#		list_page(href)
 
 	if 'disabled' not in nextlink[0].attrib['class']:
 		list_page(href)
