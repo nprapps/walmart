@@ -2,7 +2,7 @@ import codecs
 import csv
 import urlparse
 
-from scrapelib import Scraper, FileCache
+from scrapelib import Scraper, FileCache, HTTPError
 
 s = Scraper(requests_per_minute=60)
 s.cache_storage = FileCache('walmart_cache')
@@ -19,20 +19,22 @@ def read_csv():
 def scrape_release(row):
 	path = urlparse.urlparse(row['link'])[2]
 	components = path.split('/')
-	if components[1] == 'news-archive':		
-		year = components[2]
-		month = components[3]
-		day = components[4]
-		slug = components[5]
-	else:
-		year = components[1]
-		month = components[2]
-		day = components[3]
-		slug = components[4]
+	if len(components) > 4:
+		year = components[-4]
+		month = components[-3]
+		day = components[-2]
+		slug = components[-1]
 
-	response = s.urlopen(row['link'], retry_on_404=True)
-	f = codecs.open('data/%s-%s-%s-%s.txt' % (year, month, day, slug),'w', encoding='utf-8')
-	f.write(response)
+		filename = '%s-%s-%s-%s' % (year, month, day, slug)
+	else:
+		filename = path.replace('/', '-')
+
+	try:
+		response = s.urlopen(row['link'], retry_on_404=True)
+		f = codecs.open('data/%s.txt' % filename, 'w', encoding='utf-8')
+		f.write(response)
+	except HTTPError:
+		pass
 
 if __name__ == '__main__':
 	read_csv()
