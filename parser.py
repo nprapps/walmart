@@ -29,7 +29,6 @@ def parse_html(html, path):
         if 'Unveils New Design' in h1.text_content():
             return
         data['title'] = h1.text_content()
-        print h1.text_content()
 
         # Get all of the lists
         fulltext = html.find_class('rte')[0]
@@ -38,9 +37,9 @@ def parse_html(html, path):
             # Sometimes, there's a weird <value> tag inside of rte
             value_tag = fulltext.find_class('Text')[0]
             uls = value_tag.findall('ul')
-            txt = value_tag.text_content()
+            txt = value_tag.text_content().strip()
         else:
-            txt = fulltext.text_content()
+            txt = fulltext.text_content().strip()
 
     # if this stuff failed, this html does not match.
     # skip the file
@@ -60,7 +59,7 @@ def parse_html(html, path):
             if 'located at' in item.text_content() and not 'Formerly' in item.text_content():
                 data['location'] = item.text_content()
 
-            if item.text_content().startswith('Grand opening:'):
+            if item.text_content().startswith('Grand'):
                 data['opening'] = item.text_content()
 
             if item.text_content().startswith('Store opens at'):
@@ -71,15 +70,17 @@ def parse_html(html, path):
     if not data.get('location'):
         r = re.search(r'(located\s)?(at)(\s)(\d+\s)(\S+\s){4}', txt)
         if r:
-            print r.group()
             data['location'] = r.group()
 
     if not data.get('opening'):
-        r = re.search(r'([Oo]pe\w+)(\s\w+)?(\s)([M,T,W,F,S]\w+)(,\s)(\w+)(\W+\d+)', txt)
+        r = re.search(r'([Oo]pe\w+)(\s\w+)?(\s\w+)?(\s)([M,T,W,F,S]\w+)(,\s)(\w+)(\W+\d+)', txt)
 
         if r:
-            print r.group()
             data['opening'] = r.group()
+        else:
+            r = re.search(r'(unveiled at\s)(\S+\s){1,6}(\d+\s)?([a-z].[a-z].,\s)?([M,T,W,F,S]\w+)(,\s)(\w+)(\W+\d+)', txt)
+            if r:
+                data['opening'] = r.group()
 
     writer = unicodecsv.writer(open('cleaned_data.csv', 'a'))
     writer.writerow([data.get('title'), data.get('location'), data.get('opening'), year])
