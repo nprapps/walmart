@@ -29,12 +29,9 @@ def scrape_release(row):
 	else:
 		filename = path.replace('/', '-')
 
-	try:
-		response = s.urlopen(row['link'], retry_on_404=True)
-		f = codecs.open('data/%s.txt' % filename, 'w', encoding='utf-8')
-		f.write(response)
-	except HTTPError:
-		pass
+	response = s.urlopen(row['link'], retry_on_404=True)
+	f = codecs.open('data/%s.txt' % filename, 'w', encoding='utf-8')
+	f.write(response)
 
 if __name__ == '__main__':
 	read_csv()
