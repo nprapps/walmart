@@ -38,8 +38,16 @@ def parse_html(html, path):
             value_tag = fulltext.find_class('Text')[0]
             uls = value_tag.findall('ul')
             txt = value_tag.text_content().strip()
+
+            if not uls:
+                body_content = fulltext.find_class('bodyContent')[0]
+                empty_div = body_content.findall('div')[0]
+                uls = empty_div.findall('ul')
+                txt = empty_div.text_content().strip()
         else:
             txt = fulltext.text_content().strip()
+
+        print txt
 
     # if this stuff failed, this html does not match.
     # skip the file
@@ -81,6 +89,8 @@ def parse_html(html, path):
             r = re.search(r'(unveiled at\s)(\S+\s){1,6}(\d+\s)?([a-z].[a-z].,\s)?([M,T,W,F,S]\w+)(,\s)(\w+)(\W+\d+)', txt)
             if r:
                 data['opening'] = r.group()
+
+    print data
 
     writer = unicodecsv.writer(open('cleaned_data.csv', 'a'))
     writer.writerow([data.get('title'), data.get('location'), data.get('opening'), year])
