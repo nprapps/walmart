@@ -14,6 +14,8 @@ def list_page(search_page):
 	nextlink = doc.find_class('next')
 	href = nextlink[0].attrib['href']
 
+	print href
+
 	results_list = doc.get_element_by_id('results_list')
 	results = results_list.findall('li')
 	for release in results:
@@ -36,5 +38,5 @@ if __name__ == '__main__':
 	os.remove('scrapedsearch.csv')
 	writer = unicodecsv.writer(open('scrapedsearch.csv', 'a'))
 	writer.writerow(['title', 'link', 'date', 'description'])
-	list_page('http://news.walmart.com/news-archive/?q=open%20shoppers')
+	list_page('http://news.walmart.com/news-archive/?q=*&fT=0000013f-3e0e-d844-afbf-3fbf142d0000&fT=00000140-ca8f-dfdf-a5dd-cfdfba040000&fO=Store%20Openings')
 
