@@ -2,3 +2,5 @@ walmart_listcache
 walmart_cache
 data
 .DS_Store
+cleaned_data.csv
+first_list.csv
