@@ -16,15 +16,17 @@ psql walmart -c "UPDATE blocks SET centroid = ST_SetSRID(ST_MakePoint(centroid_x
 psql walmart -c "CREATE INDEX idx_blocks_centroid ON blocks USING GIST(centroid)"
 
 echo "Find nearest Walmart for every centroid"
-psql walmart -c "COPY(
+psql walmart -c "CREATE OR REPLACE VIEW blocks_5km AS
     SELECT DISTINCT B.ogc_fid, B.pop10 as population
     FROM stores AS A, blocks as B
     WHERE A.gid IN (
         SELECT X.gid
         FROM stores as X, blocks as Y
-        WHERE X.state = 'HI' AND X.gid=A.gid
+        WHERE X.state = 'IL' AND X.gid=A.gid
         ORDER BY ST_Distance_Sphere(X.geom, Y.centroid) ASC LIMIT 1
-    ) AND B.pop10 > 0 AND ST_Distance_Sphere(A.geom, B.centroid) < 5000 ORDER BY B.ogc_fid
-) to '`pwd`/build/blocks_in_range.csv' WITH CSV HEADER;"
+    ) AND B.pop10 > 0 AND ST_Distance_Sphere(A.geom, B.centroid) < 5000 ORDER BY B.ogc_fid;"
+
+psql walmart -c "COPY(select * from blocks_5km) to '`pwd`/build/blocks_in_range.csv' WITH CSV HEADER;"
 
 echo "Find total number of people within x miles of a Walmart"
+psql walmart -c "select (select sum(blocks_5km.population) from blocks_5km) / (select sum(blocks.pop10) from blocks);"
