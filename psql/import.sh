@@ -5,7 +5,6 @@ dropdb --if-exists walmart
 createdb walmart
 psql walmart -c "CREATE EXTENSION postgis;"
 psql walmart -c "CREATE EXTENSION postgis_topology"
-psql walmart -c "SELECT postgis_full_version()"
 
 # get walmart csv in the db
 echo "Import walmarts.csv into the db"
@@ -31,5 +30,5 @@ psql walmart -c "CREATE TABLE stores (
 );"
 psql walmart -c "COPY stores FROM '`pwd`/walmart_03-05-15.csv' DELIMITER ',' CSV HEADER;"
 
-echo "Import Illinois Census blocks"
-ogr2ogr -update -append -f PostgreSQL PG:"dbname=walmart" shp/tl_2014_17_tabblock10/tl_2014_17_tabblock10.shp -nlt MULTIPOLYGON25D -nln chicago_blocks -progress
+echo "Import Census blocks"
+ogr2ogr -update -append -f PostgreSQL PG:"dbname=walmart" shp/tabblock2010_15_pophu/tabblock2010_15_pophu.shp -nlt MULTIPOLYGON25D -nln blocks -progress
