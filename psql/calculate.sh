@@ -25,6 +25,6 @@ psql walmart -c "COPY(
         WHERE X.state = 'HI' AND X.gid=A.gid
         ORDER BY ST_Distance_Sphere(X.geom, Y.centroid) ASC LIMIT 1
     ) AND B.pop10 > 0 AND ST_Distance_Sphere(A.geom, B.centroid) < 5000 ORDER BY B.ogc_fid
-) to '`pwd`/build/fips_in_range.csv' WITH CSV HEADER;"
+) to '`pwd`/build/blocks_in_range.csv' WITH CSV HEADER;"
 
 echo "Find total number of people within x miles of a Walmart"
