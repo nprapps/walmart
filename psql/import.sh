@@ -9,7 +9,7 @@ psql walmart -c "SELECT postgis_full_version()"
 
 # get walmart csv in the db
 echo "Import walmarts.csv into the db"
-psql walmart -c "CREATE TABLE data (
+psql walmart -c "CREATE TABLE stores (
     store_number integer,
     store_type integer,
     display_name varchar,
@@ -26,8 +26,16 @@ psql walmart -c "CREATE TABLE data (
     vision_phone varchar,
     photo_phone varchar,
     tire_phone varchar,
-    latitude decimal,
-    longitude decimal
+    latitude float,
+    longitude float
 );"
-psql walmart -c "COPY data FROM '`pwd`/walmart_03-05-15.csv' DELIMITER ',' CSV HEADER;"
+psql walmart -c "COPY stores FROM '`pwd`/walmart_03-05-15.csv' DELIMITER ',' CSV HEADER;"
 
+echo "Generate geometry points off lat and long"
+psql walmart -c "ALTER TABLE stores ADD COLUMN gid serial PRIMARY KEY;"
+psql walmart -c "ALTER TABLE stores ADD COLUMN geom geometry(POINT,4326);"
+psql walmart -c "UPDATE stores SET geom = ST_SetSRID(ST_MakePoint(longitude,latitude),4326);"
+psql walmart -c "CREATE INDEX idx_stores_geom ON stores USING GIST(geom)"
+
+echo "Import Illinois Census blocks"
+ogr2ogr -update -append -f PostgreSQL PG:"dbname=walmart" shp/tl_2014_17_tabblock10/tl_2014_17_tabblock10.shp -nlt MULTIPOLYGON25D -nln chicago_blocks -progress
