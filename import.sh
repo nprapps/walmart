@@ -28,7 +28,7 @@ psql walmart -c "CREATE TABLE stores (
     latitude float,
     longitude float
 );"
-psql walmart -c "COPY stores FROM '`pwd`/walmart_03-05-15.csv' DELIMITER ',' CSV HEADER;"
+psql walmart -c "COPY stores FROM '`pwd`/data/walmart_03-05-15.csv' DELIMITER ',' CSV HEADER;"
 
 echo "Import Census blocks"
 ogr2ogr -update -append -f PostgreSQL PG:"dbname=walmart" shp/tabblock2010_15_pophu/tabblock2010_15_pophu.shp -nlt MULTIPOLYGON25D -nln blocks -progress

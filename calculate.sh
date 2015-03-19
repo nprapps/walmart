@@ -15,9 +15,9 @@ psql walmart -c "UPDATE blocks SET centroid_y= ST_Y(ST_Centroid(wkb_geometry));"
 psql walmart -c "UPDATE blocks SET centroid = ST_SetSRID(ST_MakePoint(centroid_x,centroid_y),4326);"
 psql walmart -c "CREATE INDEX idx_blocks_centroid ON blocks USING GIST(centroid)"
 
-echo "Find nearest Walmart for every centroid"
+echo "Create view of all centroid/Walmart relationships < 5km"
 psql walmart -c "CREATE OR REPLACE VIEW blocks_5km AS
-    SELECT DISTINCT B.ogc_fid, B.pop10 as population
+    SELECT DISTINCT B.ogc_fid as id, B.pop10 as population, ST_Distance_Sphere(A.geom, B.centroid) as distance
     FROM stores AS A, blocks as B
     WHERE A.gid IN (
         SELECT X.gid
