@@ -1,9 +1,8 @@
 walmart_listcache
 walmart_cache
-data
 .DS_Store
 cleaned_data.csv
 first_list.csv
 shp
 build
-walmart_03-05-15.csv
+scrapers/data
