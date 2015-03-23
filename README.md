@@ -10,7 +10,14 @@ The `scrapers` folder is here for posterity, but isn't being used at all.
 * PostgreSQL
 * PostGIS
 
-You will need shapefiles for Census blocks in a state. The script currently works with Hawaii, but is easily alterable to work with any state.
+## Getting shapefiles
+
+```
+curl -O http://www2.census.gov/geo/tiger/TIGER2010BLKPOPHU/tabblock2010_13_pophu.zip
+unzip tabblock2010_13_pophu.zip -d shp/georgia_blocks
+curl -O http://gis.atlantaga.gov/apps/gislayers/download/layers/ATL_POLITIC_ATLANTA_CITY_LIMITS.zip
+unzip ATL_POLITIC_ATLANTA_CITY_LIMITS.zip -d shp/atlanta_city_limits
+```
 
 To work with shapefiles for any state, change the following:
 

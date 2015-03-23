@@ -6,3 +6,5 @@ first_list.csv
 shp
 build
 scrapers/data
+*.zip
+.~*

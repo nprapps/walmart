@@ -1,14 +1,15 @@
 #!/bin/bash
 
 echo "Create database"
+
 dropdb --if-exists walmart
 createdb walmart
 psql walmart -c "CREATE EXTENSION postgis;"
 psql walmart -c "CREATE EXTENSION postgis_topology"
 
-# get walmart csv in the db
-echo "Import walmarts.csv into the db"
-psql walmart -c "CREATE TABLE stores (
+echo "Import Walmarts"
+
+psql walmart -c "CREATE TABLE walmarts (
     store_number integer,
     store_type integer,
     region varchar,
@@ -30,7 +31,13 @@ psql walmart -c "CREATE TABLE stores (
     latitude float,
     longitude float
 );"
-psql walmart -c "COPY stores FROM '`pwd`/data/urban_walmarts_selected.csv' DELIMITER ',' CSV HEADER;"
 
-echo "Import Census blocks"
-ogr2ogr -update -append -f PostgreSQL PG:"dbname=walmart" shp/tabblock2010_13_pophu/tabblock2010_13_pophu.shp -nlt MULTIPOLYGON25D -nln blocks -progress
+psql walmart -c "COPY walmarts FROM '`pwd`/data/urban_walmarts_dates.csv' DELIMITER ',' CSV HEADER;"
+
+echo "Import city outlines"
+
+ogr2ogr -f PostgreSQL PG:"dbname=walmart" shp/atlanta_city_limits/ATL_POLITIC_ATLANTA_CITY_LIMITS.shp -nlt MULTIPOLYGON -nln atlanta_city_limits -progress -lco PRECISION=NO
+
+echo "Importing Census blocks"
+
+ogr2ogr -f PostgreSQL PG:"dbname=walmart" shp/georgia_blocks/tabblock2010_13_pophu.shp -nlt MULTIPOLYGON -nln blocks -progress
