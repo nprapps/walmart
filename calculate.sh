@@ -17,11 +17,34 @@ psql walmart -c "UPDATE blocks SET centroid = ST_SetSRID(ST_Centroid(wkb_geometr
 
 echo "Create table of each block's distance to a Walmart"
 
-psql walmart -c "DROP TABLE unique_blocks_5km"
-psql walmart -c "CREATE TABLE unique_blocks_5km AS
-    SELECT
-        Y.ogc_fid as block_id,
-        Y.pop10 as population,
-        min(ST_Distance_Sphere(X.geom, Y.centroid)) as distance
-    FROM urban_walmarts as X, blocks as Y
-    GROUP BY block_id, population;"
+psql walmart -c "ALTER TABLE blocks ADD COLUMN distance integer;"
+psql walmart -c "UPDATE blocks
+    SET distance = (
+        SELECT min(ST_Distance_Sphere(urban_walmarts.geom, blocks.centroid))
+        FROM urban_walmarts
+    )"
+
+psql walmart -c "ALTER TABLE blocks ADD COLUMN nearest_walmart integer;"
+
+psql walmart -c "CREATE TABLE nearest AS
+    SELECT DISTINCT ON (blocks.ogc_fid)
+        blocks.ogc_fid,
+        urban_walmarts.store_number,
+        min(ST_Distance_Sphere(urban_walmarts.geom, blocks.centroid)) as distance
+    FROM
+        blocks,
+        urban_walmarts
+    GROUP BY
+        blocks.ogc_fid,
+        urban_walmarts.store_number
+    ORDER BY
+        blocks.ogc_fid,
+        distance;"
+
+
+
+    SELECT DISTINCT ON(g1.gid)  g1.gid As gref_gid, g1.description As gref_description, g2.gid As gnn_gid,
+           g2.description As gnn_description
+       FROM sometable As g1, sometable As g2
+       WHERE g1.gid <> g2.gid AND ST_DWithin(g1.the_geom, g2.the_geom, 300)
+       ORDER BY g1.gid, ST_Distance(g1.the_geom,g2.the_geom)
