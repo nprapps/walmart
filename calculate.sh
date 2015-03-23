@@ -40,11 +40,3 @@ psql walmart -c "CREATE TABLE nearest AS
     ORDER BY
         blocks.ogc_fid,
         distance;"
-
-
-
-    SELECT DISTINCT ON(g1.gid)  g1.gid As gref_gid, g1.description As gref_description, g2.gid As gnn_gid,
-           g2.description As gnn_description
-       FROM sometable As g1, sometable As g2
-       WHERE g1.gid <> g2.gid AND ST_DWithin(g1.the_geom, g2.the_geom, 300)
-       ORDER BY g1.gid, ST_Distance(g1.the_geom,g2.the_geom)
