@@ -11,6 +11,7 @@ echo "Import walmarts.csv into the db"
 psql walmart -c "CREATE TABLE stores (
     store_number integer,
     store_type integer,
+    year varchar,
     display_name varchar,
     address varchar,
     city varchar,
@@ -28,7 +29,7 @@ psql walmart -c "CREATE TABLE stores (
     latitude float,
     longitude float
 );"
-psql walmart -c "COPY stores FROM '`pwd`/data/walmart_03-05-15.csv' DELIMITER ',' CSV HEADER;"
+psql walmart -c "COPY stores FROM '`pwd`/data/urban_walmarts_dates.csv' DELIMITER ',' CSV HEADER;"
 
 echo "Import Census blocks"
-ogr2ogr -update -append -f PostgreSQL PG:"dbname=walmart" shp/tabblock2010_13_pophu/tabblock2010_13_pophu.shp -nlt MULTIPOLYGON25D -nln blocks -progress
+ogr2ogr -update -append -f PostgreSQL PG:"dbname=walmart" shp/ATL_POLITIC_ATLANTA_CITY_LIMITS/ATL_POLITIC_ATLANTA_CITY_LIMITS.shp -nlt MULTIPOLYGON25D -nln blocks -progress
