@@ -24,8 +24,9 @@ psql walmart -c "UPDATE blocks
         FROM urban_walmarts
     )"
 
-psql walmart -c "ALTER TABLE blocks ADD COLUMN nearest_walmart integer;"
+echo "Computing nearest walmarts for each block"
 
+psql walmart -c "DROP TABLE nearest;"
 psql walmart -c "CREATE TABLE nearest AS
     SELECT DISTINCT ON (blocks.ogc_fid)
         blocks.ogc_fid,
