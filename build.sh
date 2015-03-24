@@ -21,3 +21,4 @@ echo "-------------"
 echo "MAKE CALCULATIONS"
 echo "-----------------"
 ./calculate.sh
+./analyze.sh

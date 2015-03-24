@@ -29,21 +29,3 @@ psql walmart -c "CREATE TABLE nearest AS
     ORDER BY
         blocks.ogc_fid,
         distance;"
-
-echo "Compute population within 5km of a Walmart"
-
-# walmarts.year::integer <= 2005 AND
-
-psql walmart -c "
-    SELECT
-        sum(blocks.pop10)
-    FROM
-        blocks,
-        nearest,
-        walmarts,
-        atlanta_city_limits
-    WHERE
-        blocks.ogc_fid = nearest.ogc_fid AND
-        nearest.store_number = walmarts.store_number AND
-        nearest.distance < 5000 AND
-        ST_Within(blocks.centroid, atlanta_city_limits.wkb_geometry);"

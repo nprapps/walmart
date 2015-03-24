@@ -2,23 +2,24 @@
 
 source globals.sh
 
-echo "Downloading state block shapefiles"
+echo "Downloading Census block shapefiles"
 
 for fips in "${FIPS[@]}"
 do
     echo "${fips}"
     if ! [ -f tabblock2010_${fips}_pophu.zip ]; then
-        curl -O http://www2.census.gov/geo/tiger/TIGER2010BLKPOPHU/tabblock2010_${fips}_pophu.zip
-        unzip tabblock2010_${fips}_pophu.zip -d shp/tabblock2010_${fips}_pophu
+        curl -O http://www2.census.gov/geo/tiger/TIGER2010/PLACE/2010/tl_2010_${fips}_place10.zip
+        unzip tl_2010_${fips}_place10.zip -d shp/tl_2010_${fips}_place10
     fi
 done
 
-echo "Downloading city outline shapefiles"
+echo "Downloading Census place shapefiles"
 
-echo "Atlanta"
-
-# Atlanta
-if ! [ -f ATL_POLITIC_ATLANTA_CITY_LIMITS.zip ]; then
-    curl -O http://gis.atlantaga.gov/apps/gislayers/download/layers/ATL_POLITIC_ATLANTA_CITY_LIMITS.zip
-    unzip ATL_POLITIC_ATLANTA_CITY_LIMITS.zip -d shp/ATL_POLITIC_ATLANTA_CITY_LIMITS
-fi
+for fips in "${FIPS[@]}"
+do
+    echo "${fips}"
+    if ! [ -f tl_2010_${fips}_place10.zip ]; then
+        curl -O http://www2.census.gov/geo/tiger/TIGER2010/PLACE/2010/tl_2010_${fips}_place10.zip
+        unzip tl_2010_${fips}_place10.zip -d shp/tl_2010_${fips}_place10
+    fi
+done
