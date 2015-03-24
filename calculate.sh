@@ -1,11 +1,5 @@
 #!/bin/bash
 
-echo "Filter Walmarts to only ones with years"
-
-psql walmart -c "DELETE FROM walmarts
-    WHERE year NOT LIKE '____'
-        OR year IS NULL;"
-
 echo "Generate point geometries for walmarts"
 
 psql walmart -c "ALTER TABLE walmarts ADD COLUMN gid serial PRIMARY KEY;"
@@ -18,7 +12,7 @@ echo "Generate centroids for blocks"
 psql walmart -c "ALTER TABLE blocks ADD COLUMN centroid geometry(POINT,4269);"
 psql walmart -c "UPDATE blocks SET centroid = ST_SetSRID(ST_Centroid(wkb_geometry),4269);"
 
-echo "Computing nearest walmarts for each block"
+echo "Computing nearest walmarts for each block (this part is slow)"
 
 psql walmart -c "DROP TABLE nearest;"
 psql walmart -c "CREATE TABLE nearest AS
@@ -35,3 +29,21 @@ psql walmart -c "CREATE TABLE nearest AS
     ORDER BY
         blocks.ogc_fid,
         distance;"
+
+echo "Compute population within 5km of a Walmart"
+
+# walmarts.year::integer <= 2005 AND
+
+psql walmart -c "
+    SELECT
+        sum(blocks.pop10)
+    FROM
+        blocks,
+        nearest,
+        walmarts,
+        atlanta_city_limits
+    WHERE
+        blocks.ogc_fid = nearest.ogc_fid AND
+        nearest.store_number = walmarts.store_number AND
+        nearest.distance < 5000 AND
+        ST_Within(blocks.centroid, atlanta_city_limits.wkb_geometry);"
