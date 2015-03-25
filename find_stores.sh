@@ -65,5 +65,5 @@ psql walmart -c "
             all_walmarts.geom
         )
     )
-    TO '`pwd`/data/search.csv' WITH CSV;
+    TO '`pwd`/data/search.csv' WITH CSV HEADER;
 "

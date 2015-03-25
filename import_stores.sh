@@ -35,9 +35,12 @@ psql walmart -c "ALTER TABLE all_walmarts ADD COLUMN geom geometry(POINT,4269);"
 psql walmart -c "UPDATE all_walmarts SET geom = ST_SetSRID(ST_MakePoint(longitude,latitude),4269);"
 psql walmart -c "CREATE INDEX idx_stores_geom ON all_walmarts USING GIST(geom)"
 
-echo "Filter Walmarts to only ones with years"
+echo "Filter Walmarts to only ones with regions and opening years"
 
 psql walmart -c "DROP TABLE walmarts;"
 psql walmart -c "CREATE TABLE walmarts AS
-    SELECT * FROM all_walmarts
-    WHERE year LIKE '____';"
+    SELECT *
+    FROM all_walmarts
+    WHERE
+        region IS NOT NULL AND
+        year LIKE '____';"
