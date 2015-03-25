@@ -32,6 +32,7 @@ do
                 WHERE
                     -- Filter to state blocks first for performance
                     blocks.statefp10 = '${fips}' AND
+                    places.statefp10 = '${fips}' AND
                     places.placefp10 = '${place_fips}' AND
                     ST_Within(blocks.centroid, places.wkb_geometry) AND
                     blocks.ogc_fid = nearest.ogc_fid AND
