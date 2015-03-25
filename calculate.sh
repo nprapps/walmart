@@ -1,12 +1,5 @@
 #!/bin/bash
 
-echo "Generate point geometries for walmarts"
-
-psql walmart -c "ALTER TABLE walmarts ADD COLUMN gid serial PRIMARY KEY;"
-psql walmart -c "ALTER TABLE walmarts ADD COLUMN geom geometry(POINT,4269);"
-psql walmart -c "UPDATE walmarts SET geom = ST_SetSRID(ST_MakePoint(longitude,latitude),4269);"
-psql walmart -c "CREATE INDEX idx_stores_geom ON walmarts USING GIST(geom)"
-
 echo "Generate centroids for blocks"
 
 psql walmart -c "ALTER TABLE blocks ADD COLUMN centroid geometry(POINT,4269);"
