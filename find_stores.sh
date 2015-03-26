@@ -29,7 +29,7 @@ do
             '${place_fips}',
             ST_Buffer(
                 ST_Centroid(
-                    ST_Envelope(places.wkb_geometry)
+                    places.wkb_geometry
                 ),
                 (ST_MaxDistance(
                     ST_Envelope(places.wkb_geometry),

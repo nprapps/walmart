@@ -1,13 +1,14 @@
 #!/bin/bash
 
-FIPS=(04 11 13 17 53)
+FIPS=(04 11 13 17 48 53)
 
 NAMES=(
-    ["04"]="Phoenix, Arizona"
-    ["11"]="Washington, DC"
-    ["13"]="Atlanta, Georgia"
-    ["17"]="Chicago, Illinois"
-    ["53"]="Seattle, Washington"
+    ["04"]="Phoenix"
+    ["11"]="Washington"
+    ["13"]="Atlanta"
+    ["17"]="Chicago"
+    ["48"]="Dallas"
+    ["53"]="Seattle"
 )
 
 PLACES=(
@@ -15,6 +16,7 @@ PLACES=(
     ["11"]="50000"
     ["13"]="04000"
     ["17"]="14000"
+    ["48"]="19000"
     ["53"]="63000"
 )
 
@@ -23,5 +25,6 @@ POPS=(
     ["11"]="601723"
     ["13"]="420003"
     ["17"]="2695598"
+    ["48"]="2368139"
     ["53"]="608660"
 )
