@@ -1,0 +1,56 @@
+<Map background-color="white" srs="+init=epsg:4269">
+
+    <Style name="block-styles">
+        <Rule>
+            <Filter>[nearest2015] &lt;= 1609</Filter>
+            <PolygonSymbolizer fill="red" />
+        </Rule>
+        <Rule>
+            <Filter>[nearest2015] &gt; 1609</Filter>
+            <PolygonSymbolizer fill="blue" />
+        </Rule>
+    </Style>
+
+    <Style name="city-styles">
+        <Rule>
+            <LineSymbolizer stroke="black" />
+        </Rule>
+    </Style>
+
+    <Style name="store-styles">
+        <Rule>
+            <PointSymbolizer allow-overlap="yes" />
+        </Rule>
+    </Style>
+
+    <Layer name="blocks" status="on" srs="+init=epsg:4269">
+        <StyleName>block-styles</StyleName>
+        <Datasource>
+            <Parameter name="type">postgis</Parameter>
+            <Parameter name="host">localhost</Parameter>
+            <Parameter name="dbname">walmart</Parameter>
+            <Parameter name="table">blocks</Parameter>
+        </Datasource>
+    </Layer>
+
+    <Layer name="city" status="on" srs="+init=epsg:4269">
+        <StyleName>city-styles</StyleName>
+        <Datasource>
+            <Parameter name="type">postgis</Parameter>
+            <Parameter name="host">localhost</Parameter>
+            <Parameter name="dbname">walmart</Parameter>
+            <Parameter name="table">(select * from places where statefp10='17' and placefp10 = '14000') as city</Parameter>
+        </Datasource>
+    </Layer>
+
+    <Layer name="stores" status="on" srs="+init=epsg:4269">
+        <StyleName>store-styles</StyleName>
+        <Datasource>
+            <Parameter name="type">postgis</Parameter>
+            <Parameter name="host">localhost</Parameter>
+            <Parameter name="dbname">walmart</Parameter>
+            <Parameter name="table">(select * from walmarts where year::integer &lt;= 2015) as stores</Parameter>
+        </Datasource>
+    </Layer>
+
+</Map>

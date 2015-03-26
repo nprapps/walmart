@@ -7,18 +7,17 @@ psql walmart -c "UPDATE blocks SET centroid = ST_SetSRID(ST_Centroid(wkb_geometr
 
 echo "Computing nearest walmarts for each block (this part is slow)"
 
-psql walmart -c "DROP TABLE nearest;"
-psql walmart -c "CREATE TABLE nearest AS
-    SELECT DISTINCT ON (blocks.ogc_fid)
-        blocks.ogc_fid,
-        walmarts.store_number,
-        min(ST_Distance_Sphere(walmarts.geom, blocks.centroid)) as distance
-    FROM
-        blocks,
-        walmarts
-    GROUP BY
-        blocks.ogc_fid,
-        walmarts.store_number
-    ORDER BY
-        blocks.ogc_fid,
-        distance;"
+for year in 2015 2010 2005
+do
+    echo "  * ${year}"
+
+    psql walmart -c "ALTER TABLE blocks ADD COLUMN nearest${year} numeric;"
+
+    psql walmart -c "
+        UPDATE blocks
+        SET nearest${year} = (
+            SELECT min(ST_Distance_Sphere(walmarts.geom, blocks.centroid))
+            FROM walmarts
+            WHERE walmarts.year::INTEGER <= ${year});
+    "
+done
