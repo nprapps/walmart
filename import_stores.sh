@@ -37,10 +37,15 @@ psql walmart -c "CREATE INDEX idx_stores_geom ON all_walmarts USING GIST(geom)"
 
 echo "Filter Walmarts to only ones with regions and opening years"
 
-psql walmart -c "DROP TABLE walmarts;"
+psql walmart -c "DROP TABLE walmarts CASCADE;"
 psql walmart -c "CREATE TABLE walmarts AS
     SELECT *
     FROM all_walmarts
     WHERE
         region IS NOT NULL AND
         year LIKE '____';"
+
+for year in 2005 2010 2015
+do
+    psql walmart -c "CREATE OR REPLACE VIEW walmarts${year} AS SELECT * FROM walmarts WHERE year::integer <= ${year};"
+done
