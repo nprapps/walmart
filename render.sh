@@ -9,6 +9,7 @@ do
     name=${NAMES["${fips}"]};
     place_fips=${PLACES["${fips}"]};
     latlng=${LATLNGS["${fips}"]};
+    render_opts=${RENDER_OPTS["${fips}"]};
 
     echo "* ${name}"
 
@@ -19,6 +20,6 @@ do
             sed -i '' "s/\$PLACE_FIPS/${place_fips}/" .temp_map.xml
             sed -i '' "s/\$YEAR/${year}/" .temp_map.xml
 
-            ivframe --name ${name}_${year} -z 11 -w 1024 -t 1024 .temp_map.xml frames ${latlng}
+            ivframe --name ${name}_${year} ${render_opts} .temp_map.xml frames ${latlng}
         done
 done
