@@ -27,15 +27,16 @@ do
             '${name}',
             '${fips}',
             '${place_fips}',
-            ST_Buffer(
-                ST_Centroid(
+            ST_Transform(ST_Buffer(
+                ST_Transform(ST_Centroid(
                     places.wkb_geometry
-                ),
+                ), 2163),
                 (ST_MaxDistance(
-                    ST_Envelope(places.wkb_geometry),
-                    ST_Envelope(places.wkb_geometry)
-                ) * 0.5) * 1.2
-            )
+                    ST_Envelope(ST_Transform(places.wkb_geometry, 2163)),
+                    ST_Envelope(ST_Transform(places.wkb_geometry, 2163))
+                ) * 0.5) * 1.5,
+                32
+            ), 4269)
         FROM
             places
         WHERE

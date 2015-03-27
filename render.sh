@@ -20,6 +20,6 @@ do
             sed -i '' "s/\$PLACE_FIPS/${place_fips}/" .temp_map.xml
             sed -i '' "s/\$YEAR/${year}/" .temp_map.xml
 
-            ivframe --name ${name}_${year} ${render_opts} .temp_map.xml frames ${latlng}
+            ivframe -f svg --name ${name}_${year}.svg ${render_opts} .temp_map.xml frames ${latlng}
         done
 done
