@@ -1,4 +1,4 @@
-<Map background-color="rgba(0,0,0,0)" srs="+init=epsg:2154">
+<Map background-color="rgba(0,0,0,0)" srs="+init=epsg:$PROJ">
 
     <Style name="region-styles">
         <Rule>
@@ -41,15 +41,6 @@
         </Rule>
     </Style>
 
-    <Layer name="city" status="on" srs="+init=epsg:4269">
-        <StyleName>city-styles</StyleName>
-        <Datasource>
-            <Parameter name="type">postgis</Parameter>
-            <Parameter name="host">localhost</Parameter>
-            <Parameter name="dbname">walmart</Parameter>
-            <Parameter name="table">(select * from places where statefp10 = '$STATE_FIPS' and placefp10 = '$PLACE_FIPS') as city</Parameter>
-        </Datasource>
-    </Layer>
 
     <Layer name="streets" status="on" srs="+init=epsg:4269">
         <StyleName>street-styles</StyleName>
@@ -68,6 +59,16 @@
             <Parameter name="host">localhost</Parameter>
             <Parameter name="dbname">walmart</Parameter>
             <Parameter name="table">(select * from circles where year::integer &lt;= $YEAR order by range desc) as buffers</Parameter>
+        </Datasource>
+    </Layer>
+
+    <Layer name="city" status="on" srs="+init=epsg:4269">
+        <StyleName>city-styles</StyleName>
+        <Datasource>
+            <Parameter name="type">postgis</Parameter>
+            <Parameter name="host">localhost</Parameter>
+            <Parameter name="dbname">walmart</Parameter>
+            <Parameter name="table">(select * from places where statefp10 = '$STATE_FIPS' and placefp10 = '$PLACE_FIPS') as city</Parameter>
         </Datasource>
     </Layer>
 
