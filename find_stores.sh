@@ -68,3 +68,23 @@ psql walmart -c "
     )
     TO '`pwd`/data/search.csv' WITH CSV HEADER;
 "
+
+for fips in "${FIPS[@]}"
+do
+    name=${NAMES["${fips}"]};
+    place_fips=${PLACES["${fips}"]};
+    pop=${POPS["${fips}"]};
+
+    psql walmart -c "
+        CREATE OR REPLACE VIEW walmarts${fips} AS
+        SELECT walmarts.*
+        FROM walmarts, regions
+        WHERE
+            regions.statefp10 = '${fips}' AND
+            regions.placefp10 = '${place_fips}' AND
+            ST_Within(
+                walmarts.geom,
+                regions.geom
+            );
+    "
+done

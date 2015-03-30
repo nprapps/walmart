@@ -78,7 +78,7 @@
             <Parameter name="type">postgis</Parameter>
             <Parameter name="host">localhost</Parameter>
             <Parameter name="dbname">walmart</Parameter>
-            <Parameter name="table">(select ST_Transform(ST_Buffer(ST_Transform(geom, 2163), 500), 4269) as geom from walmarts where year::integer &lt;= $YEAR) as stores</Parameter>
+            <Parameter name="table">(select ST_Transform(ST_Buffer(ST_Transform(geom, 2163), 500), 4269) as geom from walmarts$STATE_FIPS where year::integer &lt;= $YEAR) as stores</Parameter>
         </Datasource>
     </Layer>
 
