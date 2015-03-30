@@ -42,3 +42,45 @@ do
             ), 3))
         FROM walmarts;"
 done
+
+
+psql walmart -c "DROP TABLE scales;"
+psql walmart -c "CREATE TABLE scales (
+);"
+
+psql walmart -c "ALTER TABLE scales ADD COLUMN geom geometry(LINESTRING,4269);"
+
+for fips in "${FIPS[@]}"
+do
+    place_fips=${PLACES["${fips}"]};
+
+    psql walmart -c "
+        INSERT INTO scales
+        SELECT
+            ST_MakeLine(
+                ST_Transform(
+                    ST_Translate(
+                        ST_Transform(
+                            ST_Centroid(places.wkb_geometry),
+                            2163
+                        ),
+                        0,
+                        0
+                    ),
+                    4269
+                ),
+                ST_Transform(
+                    ST_Translate(
+                        ST_Transform(
+                            ST_Centroid(places.wkb_geometry),
+                            2163
+                        ),
+                        1609.34,
+                        0
+                    ),
+                    4269
+                )
+            )
+        FROM places
+        WHERE places.statefp10 = '${fips}' AND places.placefp10 = '${place_fips}';"
+done
