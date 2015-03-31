@@ -14,7 +14,7 @@ do
 
     echo "* ${name}"
 
-        for year in 2005 2010 2015
+        for year in "${YEARS[@]}"
         do
             cp mapnik/map.xml .temp_map.xml
             sed -i '' "s/\$STATE_FIPS/${fips}/" .temp_map.xml

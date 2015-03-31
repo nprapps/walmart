@@ -15,7 +15,7 @@ do
 
     echo "* ${name}"
 
-        for year in 2005 2010 2015
+        for year in "${YEARS[@]}"
         do
             echo "  * ${year}"
 

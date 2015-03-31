@@ -2,7 +2,7 @@
 
 source globals.sh
 
-psql walmart -c "DROP TABLE regions;"
+psql walmart -c "DROP TABLE regions CASCADE;"
 psql walmart -c "CREATE TABLE regions (
     name varchar,
     statefp10 varchar,
@@ -35,7 +35,7 @@ do
                     ST_Envelope(ST_Transform(places.wkb_geometry, 2163)),
                     ST_Envelope(ST_Transform(places.wkb_geometry, 2163))
                 ) * 0.5) * 1.5,
-                32
+                64
             ), 4269)
         FROM
             places

@@ -22,3 +22,6 @@ echo "MAKE CALCULATIONS"
 echo "-----------------"
 ./calculate.sh
 ./analyze.sh
+./make_circles.sh
+./find_stores.sh
+./render.sh

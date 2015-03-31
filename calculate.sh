@@ -1,13 +1,15 @@
 #!/bin/bash
 
+source globals.sh
+
 echo "Generate centroids for blocks"
 
-psql walmart -c "ALTER TABLE blocks ADD COLUMN centroid geometry(POINT,4269);"
-psql walmart -c "UPDATE blocks SET centroid = ST_SetSRID(ST_Centroid(wkb_geometry),4269);"
+#psql walmart -c "ALTER TABLE blocks ADD COLUMN centroid geometry(POINT,4269);"
+#psql walmart -c "UPDATE blocks SET centroid = ST_SetSRID(ST_Centroid(wkb_geometry),4269);"
 
 echo "Computing nearest walmarts for each block (this part is slow)"
 
-for year in 2015 2010 2005
+for year in "${YEARS[@]}"
 do
     echo "  * ${year}"
 
