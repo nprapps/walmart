@@ -2,7 +2,7 @@
 
     <Style name="water-styles">
         <Rule>
-            <PolygonSymbolizer fill="#cccccc" />
+            <PolygonSymbolizer fill="#999900" />
         </Rule>
     </Style>
 
@@ -63,7 +63,7 @@
             <Parameter name="type">postgis</Parameter>
             <Parameter name="host">localhost</Parameter>
             <Parameter name="dbname">walmart</Parameter>
-            <Parameter name="table">(select ST_Intersection(wkb_geometry, (select geom from regions where statefp10 = '$STATE_FIPS' and placefp10 = '$PLACE_FIPS')) as wkb_geometry from osm_lines where highway = 'primary') as streets</Parameter>
+            <Parameter name="table">(select ST_Intersection(wkb_geometry, (select geom from regions where statefp10 = '$STATE_FIPS' and placefp10 = '$PLACE_FIPS')) as wkb_geometry from osm_lines where highway in ('motorway')) as streets</Parameter>
         </Datasource>
     </Layer>
 
