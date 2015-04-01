@@ -1,0 +1,242 @@
+Store Number,Store Type,Region,Year,Display Name,Address,City,State,Zip Code,Country,Latitude,Longitude
+787,1,Atlanta,1985,Walmart Supercenter,7050 Highway 85,Riverdale,GA,30274,US,33.56365499,-84.411079
+855,1,Atlanta,1986,Walmart Supercenter,4735 Jonesboro Rd,Union City,GA,30291,US,33.57258199,-84.54187
+1047,1,Atlanta,1987,Walmart Supercenter,6065 Jonesboro Rd,Morrow,GA,30260,US,33.589348,-84.33972199
+1181,1,Atlanta,1988,Walmart Supercenter,1785 Cobb Pkwy S,Marietta,GA,30060,US,33.90838041,-84.49238821
+1340,1,Atlanta,2004,Walmart Supercenter,5401 Fairington Rd,Lithonia,GA,30038,US,33.70183154,-84.16934631
+1586,1,Atlanta,1990,Walmart Supercenter,1133 Ew Connector Sw,Austell,GA,30106,US,33.85713346,-84.58799622
+2360,1,Atlanta,1995,Walmart Supercenter,4725 Ashford Dunwoody Rd,Dunwoody,GA,30338,US,33.93258869,-84.33744572
+2584,1,Atlanta,1998,Walmart Supercenter,4375 Lawrenceville Hwy,Tucker,GA,30084,US,33.85625799,-84.205132
+2941,1,Atlanta,2002,Walmart Supercenter,5200 Windward Pkwy,Alpharetta,GA,30004,US,34.09221097,-84.27673995
+3008,2,Atlanta,2013,Walmart,835 Martin Luther King Jr Driv,Atlanta,GA,30314,US,33.755374,-84.414489
+3067,2,Atlanta,2013,Walmart,4975 Jimmy Carter Blvd,Norcross,GA,30093,US,33.89488421,-84.19671557
+3071,4,Atlanta,2013,Walmart Neighborhood Market,3201 Tucker Norcross Rd,Tucker,GA,30084,US,33.88356799,-84.21881899
+3074,4,Atlanta,2012,Walmart Neighborhood Market,3059 Lawrenceville Hwy,Lawrenceville,GA,30044,US,33.92061196,-84.08629976
+3186,4,Atlanta,2012,Walmart Neighborhood Market,217,Alpharetta,GA,30009,US,34.068333,-84.29496
+3188,2,Atlanta,2013,Walmart,5935 Memorial Dr,Stone Mountain,GA,30083,US,33.80088619,-84.19547975
+3205,1,Atlanta,2001,Walmart Supercenter,1100 Thornton Rd,Lithia Springs,GA,30122,US,33.77439117,-84.60195159
+3401,1,Atlanta,2007,Walmart Supercenter,6149 Old National Hwy,College Park,GA,30349,US,33.61896133,-84.47308349
+3609,1,Atlanta,2008,Walmart Supercenter,2940 Anvil Block Rd,Ellenwood,GA,30294,US,33.63598199,-84.29315099
+3621,1,Atlanta,2007,Walmart Supercenter,1871 Chamblee Tucker Rd,Chamblee,GA,30341,US,33.889442,-84.310524
+3709,1,Atlanta,2006,Walmart Supercenter,2427 Gresham Rd Se,Atlanta,GA,30316,US,33.71882599,-84.31214099
+3710,1,Atlanta,2008,Walmart Supercenter,3580 Memorial Dr,Decatur,GA,30032,US,33.75706863,-84.26792144
+3741,2,Atlanta,2013,Walmart,1105 Research Center Atlanta D,Atlanta,GA,30331,US,33.70396041,-84.54736328
+3775,1,Atlanta,2006,Walmart Supercenter,1801 Howell Mill Rd Nw,Atlanta,GA,30318,US,33.803279,-84.411933
+4143,4,Atlanta,2013,Walmart Neighborhood Market,6152 Covington Hwy,Lithonia,GA,30058,US,33.72286207,-84.16613571
+4401,2,Atlanta,?,Walmart,6055 South Fulton Parkway,Atlanta,GA,30349,US,33.61745071,-84.59734344
+5010,42,Atlanta,2012,Walmart Express,1030 Delta Blvd,Atlanta,GA,30354,US,33.65632653,-84.423149
+5252,1,Atlanta,2004,Walmart Supercenter,4221 Atlanta Hwy,Loganville,GA,30052,US,33.84265099,-83.91243699
+5390,1,Atlanta,2005,Walmart Supercenter,210 Cobb Pkwy S,Marietta,GA,30060,US,33.94617,-84.52131599
+5812,2,Atlanta,2014,Walmart,97 Commerce Drive,Blue Ridge,GA,30513,US,34.87216517,-83.9427828
+5814,2,Atlanta,2014,Walmart,2200 Holly Springs Parkway,Holly Springs,GA,30115,US,34.18153524,-84.50394988
+5815,4,Atlanta,2014,Walmart Neighborhood Market,2909 Austell Rd Sw Suite 100,Marietta,GA,30008,US,33.88348549,-84.58741821
+6180,42,Atlanta,2013,Walmart Express,86 5Th St Nw,Atlanta,GA,30308,US,33.77680599,-84.38977897
+6998,2,Atlanta,2014,Walmart,844 Cleveland Avenue,East Point,GA,30344,US,33.68130125,-84.41738963
+1497,2,Chicago,1990,Walmart,21410 S Cicero Ave,Matteson,IL,60443,US,41.50028199,-87.735527
+1556,1,Chicago,1991,Walmart Supercenter,9265 159Th St,Orland Hills,IL,60487,US,41.6014494,-87.84524068
+1681,1,Chicago,1991,Walmart Supercenter,930 Mount Prospect Plz,Mt Prospect,IL,60056,US,42.06879816,-87.92445972
+1737,1,Chicago,1992,Walmart Supercenter,900 South Route 83,Villa Park,IL,60181,US,41.8518486,-87.95789337
+1779,2,Chicago,1992,Walmart,10260 S Harlem Ave,Bridgeview,IL,60455,US,41.70666099,-87.79980399
+1848,2,Chicago,1993,Walmart,3S100 Route 53,Glen Ellyn,IL,60137,US,41.84279322,-88.05340759
+1892,1,Chicago,1992,Walmart Supercenter,9450 Joliet Rd,Hodgkins,IL,60525,US,41.78028032,-87.86420255
+1933,2,Chicago,1993,Walmart,137 W North Ave,Northlake,IL,60164,US,41.905185,-87.90851499
+1938,2,Chicago,1993,Walmart,7050 S Cicero Ave,Bedford Park,IL,60638,US,41.76462899,-87.744628
+1998,2,Chicago,2014,Walmart,3626 Touhy Ave,Skokie,IL,60076,US,42.01182536,-87.71851837
+2204,2,Chicago,1994,Walmart,1300 Des Plaines Ave,Forest Park,IL,60130,US,41.85573099,-87.82205199
+2215,2,Chicago,1994,Walmart,2189 75Th St,Darien,IL,60561,US,41.749248,-88.000465
+2430,4,Chicago,2013,Walmart Neighborhood Market,1424 W 47Th Street,Chicago,IL,60609,US,41.80869095,-87.6609528
+2816,2,Chicago,2000,Walmart,5630 W Touhy Ave,Niles,IL,60714,US,42.0144,-87.768623
+2817,2,Chicago,2001,Walmart,17625 Torrence Avenue Tba 2817,Lansing,IL,60438,US,41.57405399,-87.555496
+2818,2,Chicago,2000,Walmart,1828 165Th Tba 2818,Hammond,IN,46320,US,41.66681289,-87.51055908
+3004,2,Chicago,2014,Walmart,3320 South Cicero Avenue,Cicero,IL,60804,US,41.833034,-87.74369493
+3039,42,Chicago,2012,Walmart Express,225 W Chicago Ave,Chicago,IL,60654,US,41.896278,-87.63526899
+3065,41,Chicago,2011,Walmart Express,3636 N Broadway St,Chicago,IL,60613,US,41.94806925,-87.64778114
+3110,4,Chicago,2015,Walmart Neighborhood Market,7535 S. Ashland Ave.,Chicago,IL,60620,US,41.75727903,-87.66353376
+3166,4,Chicago,2013,Walmart Neighborhood Market,4720 S. Cottage Grove Avenue,Chicago,IL,60653,US,41.808818,-87.60693299
+3601,1,Chicago,2006,Walmart Supercenter,4700 135Th St,Crestwood,IL,60445,US,41.648147,-87.735076
+3725,1,Chicago,2006,Walmart Supercenter,8500 W Golf Rd,Niles,IL,60714,US,42.05602999,-87.83589899
+4631,1,Chicago,2011,Walmart Supercenter,1100 5Th Ave,Hammond,IN,46320,US,41.69526368,-87.51823112
+5402,1,Chicago,2006,Walmart Supercenter,4650 W North Ave,Chicago,IL,60639,US,41.90972171,-87.74267703
+5404,2,Chicago,2005,Walmart,103 W Holbrook Rd,Glenwood,IL,60425,US,41.53887176,-87.62863159
+5442,1,Chicago,2005,Walmart Supercenter,1050 N Rohlwing Rd,Addison,IL,60101,US,41.948326,-88.03262999
+5485,1,Chicago,2006,Walmart Supercenter,2500 W 95Th St,Evergreen Park,IL,60805,US,41.72200699,-87.686187
+5486,1,Chicago,2006,Walmart Supercenter,4005 167Th St,Country Club Hills,IL,60478,US,41.5861608,-87.71432675
+5617,2,Chicago,2013,Walmart,4626 W Diversey Ave,Chicago,IL,60639,US,41.93163804,-87.74258449
+5645,4,Chicago,2013,Walmart Neighborhood Market,2844 N Broadway St,Chicago,IL,60657,US,41.93407081,-87.64445655
+5646,4,Chicago,2013,Walmart Neighborhood Market,2551 W Cermak Rd,Chicago,IL,60608,US,41.85193955,-87.68936477
+5647,4,Chicago,2011,Walmart Neighborhood Market,570 W Monroe St,Chicago,IL,60661,US,41.88061036,-87.64176763
+5781,1,Chicago,2012,Walmart Supercenter,8331 S Stewart Ave,Chicago,IL,60620,US,41.74245782,-87.63402275
+5965,2,Chicago,2013,Walmart,10900 S. Doty Avenue,Chicago,IL,60628,US,41.69343441,-87.59872019
+6167,4,Chicago,2014,Walmart Neighborhood Market,727 W. Golf Road,Des Plaines,IL,60016,US,42.053524,-87.906097
+471,1,Dallas,?,Walmart Supercenter,150 N Interstate 35 E,Lancaster,TX,75146,US,32.59201,-96.819961
+789,1,Dallas,1985,Walmart Supercenter,200 Us Highway 80 E,Mesquite,TX,75149,US,32.78921799,-96.59905999
+880,1,Dallas,1986,Walmart Supercenter,4100 W Airport Fwy,Irving,TX,75062,US,32.835174,-97.00649199
+1118,1,Dallas,1987,Walmart Supercenter,12300 Lake June Rd,Balch Springs,TX,75180,US,32.732337,-96.615211
+1800,1,Dallas,2014,Walmart Supercenter,1801 Marketplace Dr,Garland,TX,75041,US,32.862175,-96.652077
+2105,2,Dallas,1994,Walmart,13307 Midway Rd,Farmers Branch,TX,75244,US,32.926853,-96.84083599
+2433,4,Dallas,?,Walmart Neighborhood Market,101 W Buckingham Rd,Garland,TX,75040,US,32.931201,-96.63028699
+2649,1,Dallas,2000,Walmart Supercenter,1635 Market Place Blvd.,Irving,TX,75063,US,32.91924074,-96.96796126
+2667,1,Dallas,1998,Walmart Supercenter,7401 Samuell Blvd,Dallas,TX,75228,US,32.79252044,-96.68872587
+2974,4,Dallas,?,Walmart Neighborhood Market,1501 Buckingham Rd,Richardson,TX,75081,US,32.93228899,-96.69734099
+2975,4,Dallas,?,Walmart Neighborhood Market,3959 Broadway Blvd,Garland,TX,75043,US,32.86500499,-96.606819
+2976,4,Dallas,?,Walmart Neighborhood Market,915 N Town East Blvd,Mesquite,TX,75150,US,32.812904,-96.60965699
+3015,4,Dallas,2013,Walmart Neighborhood Market,2827 S. Buckner Blvd,Dallas,TX,75227,US,32.75956682,-96.68291956
+3171,4,Dallas,2012,Walmart Neighborhood Market,2218 Greenville Ave,Dallas,TX,75206,US,32.816456,-96.769608
+3224,1,Dallas,2001,Walmart Supercenter,555 W Interstate 30,Garland,TX,75043,US,32.84191799,-96.59757199
+3341,4,Dallas,?,Walmart Neighborhood Market,2305 N Central Expy,Dallas,TX,75204,US,32.80102036,-96.79351575
+3406,1,Dallas,?,Walmart Supercenter,15220 Montfort Rd,Dallas,TX,75248,US,32.959049,-96.816619
+3432,1,Dallas,?,Walmart Supercenter,951 W Belt Line Rd,Desoto,TX,75115,US,32.592381,-96.87960099
+4046,4,Dallas,2014,Walmart Neighborhood Market,1855 S Garland Ave,Garland,TX,75040,US,32.89607517,-96.64888165
+5021,4,Dallas,?,Walmart Neighborhood Market,2275 Gus Thomasson Rd,Dallas,TX,75228,US,32.83491477,-96.67552605
+5042,4,Dallas,?,Walmart Neighborhood Market,12789 Midway Rd,Dallas,TX,75244,US,32.92225599,-96.83898899
+5074,2,Dallas,?,Walmart,430 N Coit Rd,Richardson,TX,75080,US,32.95708799,-96.76758499
+5147,1,Dallas,2003,Walmart Supercenter,1521 N Cockrell Hill Rd,Dallas,TX,75211,US,32.763359,-96.897163
+5624,4,Dallas,2012,Walmart Neighborhood Market,13100 Josey Ln,Farmers Branch,TX,75234,US,32.92362899,-96.88032499
+5810,2,Dallas,2014,Walmart,7075 W Wheatland Rd,Dallas,TX,75249,US,32.64729961,-96.94552592
+5889,2,Dallas,2013,Walmart,9410 Webb Chapel Rd,Dallas,TX,75220,US,32.86128021,-96.85825422
+5931,1,Dallas,1995,Walmart Supercenter,13739 N Central Expy,Dallas,TX,75243,US,32.936745,-96.75217399
+7224,4,Dallas,2015,Walmart Neighborhood Market,350 N Bluegrove Rd,Lancaster,TX,75146,US,32.590991,-96.78619299
+7232,4,Dallas,2015,Walmart Neighborhood Market,108 W. Parkerville Road,Desoto,TX,75115,US,32.5752253,-96.8572048
+7267,4,Dallas,?,Walmart Neighborhood Market,430 N Coit Rd Tba 5074,Richardson,TX,75080,US,32.95708799,-96.76758499
+217,1,Dallas,1978,Walmart Supercenter,801 W Main St,Lewisville,TX,75067,US,33.04681,-97.01339699
+259,1,Dallas,1979,Walmart Supercenter,782 E Interstate 30,Rockwall,TX,75087,US,32.89994023,-96.46145425
+260,1,Dallas,1979,Walmart Supercenter,1200 N Highway 77,Waxahachie,TX,75165,US,32.417507,-96.84032399
+266,1,Dallas,1980,Walmart Supercenter,1601 W State Highway 114,Grapevine,TX,76051,US,32.93215899,-97.097587
+426,1,Dallas,1982,Walmart Supercenter,4691 State Highway 121,Colony,TX,75056,US,33.066619,-96.89213499
+896,1,Dallas,1986,Walmart Supercenter,2225 W Interstate 20,Grand Prairie,TX,75052,US,32.673855,-97.03574399
+949,1,Dallas,1986,Walmart Supercenter,3155 W Wheatland Rd,Dallas,TX,75237,US,32.64787299,-96.871414
+1055,1,Dallas,1987,Walmart Supercenter,5302 N Garland Ave,Garland,TX,75040,US,32.96316325,-96.6449435
+1117,1,Dallas,1987,Walmart Supercenter,6001 N Central Expy,Plano,TX,75023,US,33.05612899,-96.697181
+1178,1,Dallas,1988,Walmart Supercenter,4101 Highway 121,Bedford,TX,76021,US,32.864032,-97.105445
+1216,1,Dallas,1988,Walmart Supercenter,1213 E Trinity Mills Rd,Carrollton,TX,75006,US,32.98536599,-96.905731
+1801,1,Dallas,1988,Walmart Supercenter,4801 S Cooper St,Arlington,TX,76017,US,32.668674,-97.132507
+2086,1,Dallas,?,Walmart Supercenter,1700 Dallas Pkwy,Plano,TX,75093,US,33.02499399,-96.827843
+2397,4,Dallas,?,Walmart Neighborhood Market,2951 Matlock Rd,Mansfield,TX,76063,US,32.605415,-97.11631699
+2427,1,Dallas,?,Walmart Supercenter,9301 Forest Ln,Dallas,TX,75243,US,32.90927767,-96.73902399
+2625,2,Dallas,?,Walmart,1025 West Trinity Mills Mail,Carrollton,TX,75006,US,32.98140699,-96.91223899
+2883,1,Dallas,2000,Walmart Supercenter,8801 Ohio Dr,Plano,TX,75024,US,33.097427,-96.79890399
+2918,1,Dallas,?,Walmart Supercenter,730 W Exchange Pkwy,Allen,TX,75013,US,33.11945699,-96.67179899
+2926,1,Dallas,2000,Walmart Supercenter,6000 Coit Rd,Plano,TX,75023,US,33.055328,-96.768135
+2973,2,Dallas,2013,Walmart,115 West Fm 544,Murphy,TX,75094,US,33.01320599,-96.615074
+2977,4,Dallas,?,Walmart Neighborhood Market,735 W Sublett Rd,Arlington,TX,76017,US,32.645755,-97.117187
+2995,4,Dallas,?,Walmart Neighborhood Market,8040 Independence Pkwy,Plano,TX,75025,US,33.086978,-96.748512
+2996,1,Dallas,2001,Walmart Supercenter,18121 Marsh Ln,Dallas,TX,75287,US,32.995502,-96.857765
+3014,1,Dallas,?,Walmart Supercenter,200 Short St,Dallas,TX,75232,US,32.5842781,-96.95388793
+3198,4,Dallas,?,Walmart Neighborhood Market,4025 Old Denton Rd,Carrollton,TX,75007,US,33.01843199,-96.91608399
+3199,4,Dallas,?,Walmart Neighborhood Market,3513 E Park Blvd,Plano,TX,75074,US,33.032245,-96.66617499
+3225,1,Dallas,2001,Walmart Supercenter,2501 Lakeview Pkwy,Rowlett,TX,75088,US,32.91094199,-96.577667
+3285,1,Dallas,?,Walmart Supercenter,621 Uptown Blvd,Cedar Hill,TX,75104,US,32.59637184,-96.94513298
+3287,4,Dallas,2002,Walmart Neighborhood Market,1515 Justin Rd,Lewisville,TX,75077,US,33.072715,-97.037925
+3392,4,Dallas,?,Walmart Neighborhood Market,2108 Bedford Rd,Bedford,TX,76021,US,32.843696,-97.131973
+3433,1,Dallas,2012,Walmart Supercenter,100 Ryan Drive,Red Oak,TX,75154,US,32.53388977,-96.81736755
+3482,1,Dallas,2002,Walmart Supercenter,425 Coit Rd,Plano,TX,75075,US,33.00412299,-96.770774
+3530,4,Dallas,?,Walmart Neighborhood Market,850 W Rusk St,Rockwall,TX,75087,US,32.931713,-96.468185
+3574,4,Dallas,?,Walmart Neighborhood Market,1520 E Exchange Pkwy,Allen,TX,75002,US,33.114147,-96.62975299
+3594,4,Dallas,?,Walmart Neighborhood Market,2610 W Pioneer Pkwy,Pantego,TX,76013,US,32.70962208,-97.15084768
+3834,4,Dallas,?,Walmart Neighborhood Market,428 N Dallas Street,Palmer,TX,75152,US,32.43726186,-96.66848726
+4182,4,Dallas,2013,Walmart Neighborhood Market,3312 Preston Road,Plano,TX,75093,US,33.04313599,-96.79258699
+4279,1,Dallas,?,Walmart Supercenter,400 N Highway 67,Midlothian,TX,76065,US,32.48555973,-97.00888372
+5092,1,Dallas,?,Walmart Supercenter,190 E Round Grove Rd,Lewisville,TX,75067,US,33.00119399,-96.991172
+5191,1,Dallas,2005,Walmart Supercenter,802 E Us Highway 80,Forney,TX,75126,US,32.74472399,-96.446106
+5210,1,Dallas,2004,Walmart Supercenter,2050 N Highway 78,Wylie,TX,75098,US,33.02304826,-96.51481211
+5211,1,Dallas,2004,Walmart Supercenter,5001 Mckinney Ranch Pkwy,Mckinney,TX,75070,US,33.15805799,-96.683525
+5288,1,Dallas,2004,Walmart Supercenter,220 N Highway 175,Seagoville,TX,75159,US,32.64954,-96.53434799
+5416,1,Dallas,2005,Walmart Supercenter,915 E Randol Mill Rd,Arlington,TX,76011,US,32.750892,-97.09463499
+5613,4,Dallas,?,Walmart Neighborhood Market,2121 N Collins St,Arlington,TX,76011,US,32.76776298,-97.09706403
+5614,4,Dallas,?,Walmart Neighborhood Market,4904 Colleyville Blvd,Colleyville,TX,76034,US,32.88214099,-97.15676799
+5657,4,Dallas,?,Walmart Neighborhood Market,3100 Custer Rd,Plano,TX,75075,US,33.04014899,-96.731582
+5672,2,Dallas,2013,Walmart,2662 W Lucas Rd,Lucas,TX,75002,US,33.08546829,-96.60813903
+5673,2,Dallas,2014,Walmart,8015 Woodbridge Parkway,Sachse,TX,75048,US,32.98952865,-96.56922912
+5823,1,Dallas,?,Walmart Supercenter,6185 Retail Rd,Dallas,TX,75231,US,32.86176502,-96.75373859
+5866,1,Dallas,?,Walmart Supercenter,8555 Preston Rd,Frisco,TX,75034,US,33.14641177,-96.80480718
+5963,4,Dallas,?,Walmart Neighborhood Market,2800 Flower Mound Rd,Flower Mound,TX,75022,US,33.01549099,-97.071922
+5986,4,Dallas,?,Walmart Neighborhood Market,4268 Legacy Dr,Frisco,TX,75034,US,33.114803,-96.83811099
+6078,4,Dallas,2015,Walmart Neighborhood Market,1400 Mccreary Road,Wylie,TX,75098,US,33.03336672,-96.59465409
+6851,4,Dallas,?,Walmart Neighborhood Market,6750 Murphy Road,Sachse,TX,75048,US,32.98313833,-96.61333166
+7323,2,Dallas,2014,Walmart,13307 Midway Rd Tba 2105,Farmers Branch,TX,75244,US,32.926853,-96.84083599
+2258,2,DC,1996,Walmart,7910 Richmond Hwy,Alexandria,VA,22306,US,38.74297969,-77.08513207
+2194,2,DC,1995,Walmart,5885 Kingstowne Blvd,Alexandria,VA,22315,US,38.76975631,-77.13613891
+2799,2,DC,2000,Walmart,8745 Branch Ave,Clinton,MD,20735,US,38.77216346,-76.88751161
+5129,2,DC,2007,Walmart,6210 Annapolis Rd,Landover Hills,MD,20784,US,38.94631958,-76.89414978
+5753,1,DC,2010,Walmart Supercenter,6303 Richmond Hwy,Alexandria,VA,22306,US,38.78100603,-77.07848288
+5936,2,DC,2013,Walmart,1500 B Cornerside Blvd,Vienna,VA,22182,US,38.93059158,-77.24497222
+5941,1,DC,2013,Walmart Supercenter,99 H Street Nw,Washington,DC,20001,US,38.900249,-77.01199561
+5968,1,DC,2013,Walmart Supercenter,5929 Georgia Ave Nw,Washington,DC,20011,US,38.96210099,-77.02728999
+9997,,DC,2016,,,Washington,DC,,,38.889386,-76.913202
+9998,,DC,2016,,,Washington,DC,,,38.860957,-76.967594
+9999,,DC,2016,,,Washington,DC,,,38.957351,-77.002408
+1590,1,Miami,1992,Walmart Supercenter,5851 Nw 177Th St,Hialeah,FL,33015,US,25.93504905,-80.29637145
+2091,1,Miami,2012,Walmart Supercenter,8651 Nw 13Th Ter,Doral,FL,33126,US,25.786736,-80.33572399
+2814,1,Miami,2012,Walmart Supercenter,9300 Nw 77Th Ave,Hialeah,FL,33016,US,25.85665784,-80.32318197
+2907,4,Miami,2015,Walmart Neighborhood Market,3791 Nw 167Th Street,Miami Gardens,FL,33055,US,25.92644699,-80.26215399
+3235,1,Miami,2005,Walmart Supercenter,1425 Ne 163Rd St,North Miami Beach,FL,33162,US,25.92563286,-80.17318882
+3311,1,Miami,?,Walmart Supercenter,19501 Nw 27Th Ave,Miami Gardens,FL,33056,US,25.953306,-80.244003
+3397,1,Miami,2006,Walmart Supercenter,17650 Nw 2Nd Ave,Miami Gardens,FL,33169,US,25.93556699,-80.20716
+4140,4,Miami,2014,Walmart Neighborhood Market,6991 Sw 8Th St,Miami,FL,33134,US,25.76449203,-80.30850982
+4161,2,Miami,2014,Walmart,9191 W. Flagler St,Miami,FL,33174,US,25.76942101,-80.34420244
+4303,2,Miami,2015,Walmart,3200 Nw 79Th Street,Miami,FL,33147,US,25.843837,-80.25142599
+5615,4,Miami,2012,Walmart Neighborhood Market,11800 Hialeah Gardens Blvd,Hialeah Gardens,FL,33018,US,25.89596939,-80.3512268
+5854,1,Miami,2011,Walmart Supercenter,8400 Coral Way,Miami,FL,33155,US,25.74765019,-80.33166043
+5945,4,Miami,2012,Walmart Neighborhood Market,400 W 49Th St,Hialeah,FL,33012,US,25.86588199,-80.292045
+2583,2,New York,1997,Walmart,1123 Jerusalem Ave,Uniondale,NY,11553,US,40.69417476,-73.57819072
+3420,2,New York,?,Walmart,1220 Old Country Rd,Westbury,NY,11590,US,40.744663,-73.601127
+3520,1,New York,2004,Walmart Supercenter,400 Park Pl,Secaucus,NJ,7094,US,40.79074501,-74.0442641
+3795,1,New York,2010,Walmart Supercenter,2100 88Th St,North Bergen,NJ,7047,US,40.81240117,-74.01428371
+5293,2,New York,2003,Walmart,77 Green Acres Rd,Valley Stream,NY,11581,US,40.660957,-73.72656999
+1512,1,Phoenix,1990,Walmart Supercenter,800 W Warner Rd,Chandler,AZ,85225,US,33.337063,-111.854614
+1532,1,Phoenix,1990,Walmart Supercenter,5845 W Bell Rd,Glendale,AZ,85308,US,33.63703499,-112.184997
+1533,1,Phoenix,2007,Walmart Supercenter,7975 W Peoria Ave,Peoria,AZ,85345,US,33.5811147,-112.2304527
+1549,1,Phoenix,1991,Walmart Supercenter,2020 N 75Th Ave,Phoenix,AZ,85035,US,33.47106899,-112.222976
+1598,2,Phoenix,1991,Walmart,4617 E Bell Rd,Phoenix,AZ,85032,US,33.639034,-111.981758
+1746,1,Phoenix,1992,Walmart Supercenter,1380 W Elliot Rd,Tempe,AZ,85284,US,33.350521,-111.96128
+2112,1,Phoenix,1994,Walmart Supercenter,4915 N Pima Rd,Scottsdale,AZ,85251,US,33.50777506,-111.8914765
+2113,1,Phoenix,?,Walmart Supercenter,1607 W Bethany Home Rd,Phoenix,AZ,85015,US,33.522308,-112.092979
+2482,1,Phoenix,?,Walmart Supercenter,857 N Dobson Rd,Mesa,AZ,85201,US,33.43188531,-111.8737444
+2512,1,Phoenix,?,Walmart Supercenter,1825 W Bell Rd,Phoenix,AZ,85023,US,33.637852,-112.098099
+2515,1,Phoenix,2000,Walmart Supercenter,3721 E Thomas Rd,Phoenix,AZ,85018,US,33.48041251,-112.001488
+2554,1,Phoenix,1998,Walmart Supercenter,13055 W Rancho Santa Fe Blvd,Avondale,AZ,85392,US,33.459625,-112.338096
+2632,4,Phoenix,2014,Walmart Neighborhood Market,115 E Dunlap Ave,Phoenix,AZ,85020,US,33.56676099,-112.072128
+2657,4,Phoenix,2003,Walmart Neighborhood Market,6085 W Chandler Blvd,Chandler,AZ,85226,US,33.30523878,-111.9469667
+2671,1,Phoenix,2005,Walmart Supercenter,1175 S Arizona Ave,Chandler,AZ,85286,US,33.28920699,-111.838692
+2766,1,Phoenix,2000,Walmart Supercenter,15355 N Northsight Blvd,Scottsdale,AZ,85260,US,33.62338299,-111.893791
+2767,1,Phoenix,2004,Walmart Supercenter,4505 E Mckellips Rd,Mesa,AZ,85215,US,33.449573,-111.733627
+2768,1,Phoenix,1999,Walmart Supercenter,1955 S Stapley Dr,Mesa,AZ,85204,US,33.38048899,-111.803482
+2777,1,Phoenix,2000,Walmart Supercenter,13770 W Bell Rd,Surprise,AZ,85374,US,33.64255899,-112.357711
+3241,1,Phoenix,?,Walmart Supercenter,18551 N 83Rd Ave,Glendale,AZ,85308,US,33.64972025,-112.2367901
+3314,4,Phoenix,2005,Walmart Neighborhood Market,7450 W Glendale Ave,Glendale,AZ,85303,US,33.538975,-112.218918
+3315,4,Phoenix,?,Walmart Neighborhood Market,4230 W Union Hills Dr,Glendale,AZ,85308,US,33.65464344,-112.150305
+3465,1,Phoenix,2003,Walmart Supercenter,5010 N 95Th Ave,Glendale,AZ,85305,US,33.51014299,-112.266273
+3604,4,Phoenix,?,Walmart Neighborhood Market,14200 W Indian School Rd,Goodyear,AZ,85395,US,33.48594523,-112.3644975
+3771,1,Phoenix,?,Walmart Supercenter,6150 S 35Th Ave,Phoenix,AZ,85041,US,33.39068199,-112.136169
+3799,1,Phoenix,2007,Walmart Supercenter,240 W Baseline Rd,Mesa,AZ,85210,US,33.37890498,-111.8377358
+3844,4,Phoenix,?,Walmart Neighborhood Market,5137 W Olive Ave,Glendale,AZ,85302,US,33.56751523,-112.1699683
+3845,4,Phoenix,?,Walmart Neighborhood Market,6645 W Peoria Ave,Glendale,AZ,85302,US,33.580547,-112.202026
+3846,4,Phoenix,?,Walmart Neighborhood Market,2725 E Mckellips Rd,Mesa,AZ,85213,US,33.44968399,-111.772102
+3896,1,Phoenix,?,Walmart Supercenter,21655 N Lake Pleasant Pkwy,Peoria,AZ,85382,US,33.68013299,-112.27684
+4060,2,Phoenix,2013,Walmart,671 E Apache Blvd,Tempe,AZ,85281,US,33.41463536,-111.9287404
+4218,4,Phoenix,?,Walmart Neighborhood Market,15431 W Greenway Rd,Surprise,AZ,85374,US,33.622886,-112.392501
+4232,1,Phoenix,?,Walmart Supercenter,4747 E Cactus Rd,Phoenix,AZ,85032,US,33.597377,-111.979026
+4233,4,Phoenix,2008,Walmart Neighborhood Market,6550 West Happy Valley Rd,Glendale,AZ,85310,US,33.712264,-112.200302
+4275,4,Phoenix,2015,Walmart Neighborhood Market,7421 West Thunderbird Road,Peoria,AZ,85381,US,33.61032396,-112.2183151
+4293,4,Phoenix,2008,Walmart Neighborhood Market,2435 E Baseline Rd,Phoenix,AZ,85042,US,33.37612899,-112.029549
+4324,4,Phoenix,2013,Walmart Neighborhood Market,1900 E Chandler Blvd,Chandler,AZ,85225,US,33.30649942,-111.8094036
+4336,1,Phoenix,?,Walmart Supercenter,12900 W Thunderbird Rd,El Mirage,AZ,85335,US,33.60914245,-112.3367319
+5124,1,Phoenix,2004,Walmart Supercenter,5605 W Northern Ave,Glendale,AZ,85301,US,33.551681,-112.17971
+5189,1,Phoenix,2004,Walmart Supercenter,5250 W Indian School Rd,Phoenix,AZ,85031,US,33.49502585,-112.1722146
+5190,1,Phoenix,2005,Walmart Supercenter,2501 W Happy Valley Rd Ste 34,Phoenix,AZ,85085,US,33.71275618,-112.1119058
+5257,4,Phoenix,?,Walmart Neighborhood Market,5122 E University Dr,Mesa,AZ,85205,US,33.42376999,-111.720535
+5304,4,Phoenix,?,Walmart Neighborhood Market,1916 S Lindsay Rd,Mesa,AZ,85204,US,33.38029399,-111.772544
+5329,1,Phoenix,2005,Walmart Supercenter,4435 W Anthem Way,Anthem,AZ,85086,US,33.87101188,-112.1548051
+5330,1,Phoenix,2005,Walmart Supercenter,6145 N 35Th Ave,Phoenix,AZ,85017,US,33.52629799,-112.132614
+5331,1,Phoenix,2004,Walmart Supercenter,7575 W Lower Buckeye Rd,Phoenix,AZ,85043,US,33.421047,-112.223022
+5332,4,Phoenix,?,Walmart Neighborhood Market,730 E Mckellips Rd,Mesa,AZ,85203,US,33.45155462,-111.8151006
+5369,1,Phoenix,2005,Walmart Supercenter,1100 N Estrella Pkwy,Goodyear,AZ,85338,US,33.45928743,-112.3926432
+5428,1,Phoenix,2005,Walmart Supercenter,1710 S Greenfield Rd,Mesa,AZ,85206,US,33.383873,-111.740143
+5429,1,Phoenix,?,Walmart Supercenter,14111 N Prasada Gateway Ave,Surprise,AZ,85388,US,33.61033402,-112.42245
+5768,1,Phoenix,2009,Walmart Supercenter,800 E Southern Ave,Tempe,AZ,85282,US,33.393863,-111.927642
+5835,1,Phoenix,2009,Walmart Supercenter,34399 N Cave Creek Rd,Cave Creek,AZ,85331,US,33.79703722,-111.9649462
+6480,2,Phoenix,2015,Walmart,3460 W. Chandler Boulevard,Chandler,AZ,85226,US,33.30577187,-111.9012096
+2317,2,Seattle,1996,Walmart,6797 State Highway 303 Ne,Bremerton,WA,98311,US,47.62495422,-122.6319809
+2516,2,Seattle,1996,Walmart,743 Rainier Avenue South,Renton,WA,98057,US,47.47241601,-122.2176091
+3098,4,Seattle,2012,Walmart Neighborhood Market,15063 Main St,Bellevue,WA,98007,US,47.60975986,-122.1389023
+5939,2,Seattle,2012,Walmart,12620 Se 41St Pl,Bellevue,WA,98006,US,47.57205002,-122.1711002
